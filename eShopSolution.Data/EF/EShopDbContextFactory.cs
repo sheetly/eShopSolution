@@ -8,7 +8,7 @@ using System.Text;
 
 namespace eShopSolution.Data.EF
 {
-    class EShopSolutionDbContextFactory : IDesignTimeDbContextFactory<EShopDbContext>
+    public class EShopDbContextFactory : IDesignTimeDbContextFactory<EShopDbContext>
     {
         public EShopDbContext CreateDbContext(string[] args)
         {
@@ -16,10 +16,12 @@ namespace eShopSolution.Data.EF
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
-            var connectionString = configuration.GetConnectionString("eShopSolutionDatabase");
+
+            var connectionString = configuration.GetConnectionString("eShopSolutionDb");
 
             var optionsBuilder = new DbContextOptionsBuilder<EShopDbContext>();
             optionsBuilder.UseSqlServer(connectionString);
+
             return new EShopDbContext(optionsBuilder.Options);
         }
     }
