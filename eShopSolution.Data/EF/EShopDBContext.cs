@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.EF
 {
@@ -56,7 +54,6 @@ namespace eShopSolution.Data.EF
 
         public DbSet<AppConfig> AppConfigs { get; set; }
 
-
         public DbSet<Cart> Carts { get; set; }
 
         public DbSet<CategoryTranslation> CategoryTranslations { get; set; }
@@ -73,11 +70,8 @@ namespace eShopSolution.Data.EF
 
         public DbSet<Promotion> Promotions { get; set; }
 
-
         public DbSet<Transaction> Transactions { get; set; }
 
         public DbSet<ProductImage> ProductImages { get; set; }
-
-
     }
 }
