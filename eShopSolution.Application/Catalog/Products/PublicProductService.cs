@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace eShopSolution.Application.Catalog.Products
+﻿namespace eShopSolution.Application.Catalog.Products
 {
-    class PublicProductService
+    internal class PublicProductService
     {
     }
 }
